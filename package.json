@@ -1,0 +1,41 @@
+{
+  "name": "vumonic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "config": "^1.30.0",
+    "cors": "^2.8.5",
+    "debug": "^3.1.0",
+    "eslint": "^4.19.1",
+    "express": "^4.17.1",
+    "fs-extra": "6.0.0",
+    "gm": "^1.23.1",
+    "json-routing": "^2.0.10",
+    "jsonwebtoken": "^8.2.1",
+    "moment": "^2.25.3",
+    "moment-timezone": "^0.5.28",
+    "mongoose": "^5.9.13",
+    "mongoose-ttl": "0.0.3",
+    "mongoose-unique-validator": "^2.0.1",
+    "nodemon": "^1.19.4",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "requestretry": "^4.1.0",
+    "runscript": "^1.4.0",
+    "server": "^1.0.27",
+    "underscore": "^1.10.2",
+    "vhost": "^3.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

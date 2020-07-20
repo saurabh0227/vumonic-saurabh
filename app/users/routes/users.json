@@ -1,0 +1,22 @@
+{
+  "/signup/": {
+    "POST": {
+      "route": "signup",
+      "policy": []
+    }
+  },
+  "/getUser/:userId": {
+    "GET": {
+      "route": "getUser",
+      "policy": [
+        "auth:verifyToken"
+      ]
+    }
+  },
+  "/login/": {
+    "POST": {
+      "route": "login",
+      "policy": []
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+	"app": {
+		"secret": "Saurabh",
+		"issuer": "localhost",
+		"appSecretKey": "Saurabh@1234",
+		"auth": {
+			"issuer": "localhost",
+			"expires": "100h"
+		},
+		"modules": [
+			{
+				"name": "users",
+				"enable": true
+			},
+			{
+				"name": "topics",
+				"enable": true
+			},
+			{
+				"name": "articles",
+				"enable": true
+			},
+			{
+				"name": "tags",
+				"enable": true
+			}
+		]
+	},
+	"server": {
+		"port": 3000
+	},
+	"env": "local",
+	"database": {
+		"mongo": "mongodb://127.0.0.1/vumonic",
+		"redis": {
+			"host": "127.0.0.1",
+			"port": 6379
+		}
+	}
+}

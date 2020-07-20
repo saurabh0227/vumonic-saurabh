@@ -1,0 +1,22 @@
+{
+  "/createTopic": {
+    "POST": {
+      "route": "createTopic",
+      "policy": [
+        "auth:verifyToken"
+      ]
+    }
+  },
+  "/fetchTopics": {
+    "GET": {
+      "route": "fetchTopics",
+      "policy": []
+    }
+  },
+  "/fetchTopic/:topicId": {
+    "GET": {
+      "route": "fetchTopic",
+      "policy": []
+    }
+  }
+}

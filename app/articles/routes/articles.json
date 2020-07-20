@@ -1,0 +1,52 @@
+{
+  "/createArticle": {
+    "POST": {
+      "route": "createArticle",
+      "policy": [
+        "auth:verifyToken"
+      ]
+    }
+  },
+  "/updateArticle/:articleId": {
+    "PUT": {
+      "route": "updateArticle",
+      "policy": [
+        "auth:verifyToken"
+      ]
+    }
+  },
+  "/fetchArticleByTopicFeatured/:topicId": {
+    "GET": {
+      "route": "fetchArticleByTopicFeatured",
+      "policy": [
+        "auth:verifyToken"
+      ]
+    }
+  },
+  "/fetchArticleByTopicNonFeatured/:topicId": {
+    "GET": {
+      "route": "fetchArticleByTopicNonFeatured",
+      "policy": []
+    }
+  },
+  "/fetchArticle/:articleId": {
+    "GET": {
+      "route": "fetchArticle",
+      "policy": []
+    }
+  },
+  "/fetchArticleByTags/:articleId": {
+    "GET": {
+      "route": "fetchArticleByTags",
+      "policy": []
+    }
+  },
+  "/articleBinaryRepresentation": {
+    "GET": {
+      "route": "articleBinaryRepresentation",
+      "policy": [
+        "auth:verifyToken"
+      ]
+    }
+  }
+}

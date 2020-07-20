@@ -1,0 +1,8 @@
+{
+  "/createTag": {
+    "POST": {
+      "route": "createTag",
+      "policy": []
+    }
+  }
+}
