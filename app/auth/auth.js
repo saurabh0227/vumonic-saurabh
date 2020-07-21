@@ -25,7 +25,7 @@ exports.verifyToken = async (req, res, next) => {
 		try {
 			decoded = await jwt.verify(req.headers["access-token"], appSecret);
 		} catch (error) {
-			let err = await errorObj.errorHander(400, new Error('Please logout and login again.'));
+			let err = await errorObj.errorHander(400, new Error('Not authorized.'));
 			return res.status(err.respHeadersStatus).json(err.respParams);
 		}
 		if (decoded.userId) {

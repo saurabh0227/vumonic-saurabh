@@ -55,26 +55,6 @@ class UsersManager {
       }
     });
   }
-
-  async getUser(reqObj) {
-    return new Promise(async (resolve, reject) => {
-      try {
-        const reqParams = reqObj.params
-        const userData = await userModel.findOne({
-          _id: ObjectId(reqParams.userId)
-        }, { password: 0 });
-        if (!userData) {
-          let errResp = await errorObj.errorHander(400, new Error('User does not exist, please sign-up.'));
-          reject(errResp)
-        } else
-          resolve(userData);
-
-      } catch (error) {
-        let errResp = await errorObj.errorHander('', error);
-        reject(errResp);
-      }
-    });
-  }
 }
 
 module.exports = UsersManager

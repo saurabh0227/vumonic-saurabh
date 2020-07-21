@@ -20,10 +20,3 @@ exports.signup = async (req, res) => {
     res.json(userData);
   }
 };
-
-exports.getUser = async (req, res) => {
-  const userData = await userManager.getUser(req).catch(err => {
-    res.status(err.respHeadersStatus).json(err.respParams);
-  });
-  res.json(userData);
-};
