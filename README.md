@@ -26,3 +26,6 @@ localhost:3000/fetchArticleByTags/:articleId -> GET =>Used to fetch an article o
 localhost:3000/articleBinaryRepresentation -> GET =>Used to fetch binary representation of artilces.
 
 localhost:3000/createTag -> POST =>Used to add a tag in DB.
+
+# Configuration info
+All the configuration files and place in config folder i.e mongoose connection, server information, and routes information.

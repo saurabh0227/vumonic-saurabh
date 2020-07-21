@@ -1,5 +1,5 @@
-let article = require('./../models/articles');
-let articleManager = new article();
+const article = require('./../models/articles');
+const articleManager = new article();
 
 exports.createArticle = async (req, res) => {
   const articleData = await articleManager.createArticle(req).catch(err => {

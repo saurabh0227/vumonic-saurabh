@@ -1,5 +1,5 @@
-let user = require('../models/users');
-let userManager = new user();
+const user = require('../models/users');
+const userManager = new user();
 
 exports.login = async (req, res) => {
   const userData = await userManager.login(req).catch(err => {

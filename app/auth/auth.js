@@ -1,13 +1,13 @@
 const jwt = require('jsonwebtoken');
 const config = require('config');
-let appSecret = config.get('app.secret');
-let tokenExpiresIn = config.get('app.auth.expires');
-let tokenIssuer = config.get('app.auth.issuer');
+const appSecret = config.get('app.secret');
+const tokenExpiresIn = config.get('app.auth.expires');
+const tokenIssuer = config.get('app.auth.issuer');
 const errorModel = require('../../lib/error');
 const errorObj = new errorModel();
 
 exports.generateToken = (user, options) => {
-	let token = jwt.sign({
+	const token = jwt.sign({
 		userId: user.userId.toString(),
 		role: user.userRole
 	}, appSecret, {
@@ -25,7 +25,7 @@ exports.verifyToken = async (req, res, next) => {
 		try {
 			decoded = await jwt.verify(req.headers["access-token"], appSecret);
 		} catch (error) {
-			let err = await errorObj.errorHander(400, new Error('Not authorized.'));
+			const err = await errorObj.errorHander(400, new Error('Not authorized.'));
 			return res.status(err.respHeadersStatus).json(err.respParams);
 		}
 		if (decoded.userId) {
@@ -33,7 +33,7 @@ exports.verifyToken = async (req, res, next) => {
 			req.role = decoded.role;
 			return next();
 		} else {
-			let err = await errorObj.errorHander(400, new Error('Invalid Access Token'));
+			const err = await errorObj.errorHander(400, new Error('Invalid Access Token'));
 			return res.status(err.respHeadersStatus).json(err.respParams);
 		}
 	}

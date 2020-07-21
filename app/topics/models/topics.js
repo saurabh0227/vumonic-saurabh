@@ -39,7 +39,7 @@ class TopicsManager {
       try {
         const topics = await topicModel.find({});
         if (topics.length === 0) {
-          let errResp = await errorObj.errorHander(400, new Error('No topics found.'));
+          const errResp = await errorObj.errorHander(400, new Error('No topics found.'));
           reject(errResp)
         } else
           resolve({
@@ -47,7 +47,7 @@ class TopicsManager {
             data: topics
           });
       } catch (error) {
-        let errResp = await errorObj.errorHander('', error);
+        const errResp = await errorObj.errorHander('', error);
         reject(errResp);
       }
     });
@@ -63,7 +63,7 @@ class TopicsManager {
           data: topic
         });
       } catch (error) {
-        let errResp = await errorObj.errorHander('', error);
+        const errResp = await errorObj.errorHander('', error);
         reject(errResp);
       }
     });

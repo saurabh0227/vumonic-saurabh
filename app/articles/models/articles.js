@@ -72,7 +72,7 @@ class ArticlesManager {
           data: articles
         });
       } catch (error) {
-        let errResp = await errorObj.errorHander('', error);
+        const errResp = await errorObj.errorHander('', error);
         reject(errResp);
       }
     });
@@ -92,7 +92,7 @@ class ArticlesManager {
           data: articles
         });
       } catch (error) {
-        let errResp = await errorObj.errorHander('', error);
+        const errResp = await errorObj.errorHander('', error);
         reject(errResp);
       }
     });
@@ -111,11 +111,10 @@ class ArticlesManager {
         resolve({
           status: 'success',
           message: 'Articles fetched WRT tag.',
-
           data: articles
         });
       } catch (error) {
-        let errResp = await errorObj.errorHander('', error);
+        const errResp = await errorObj.errorHander('', error);
         reject(errResp);
       }
     });
@@ -133,7 +132,7 @@ class ArticlesManager {
           data: article
         });
       } catch (error) {
-        let errResp = await errorObj.errorHander('', error);
+        const errResp = await errorObj.errorHander('', error);
         reject(errResp);
       }
     });
@@ -177,8 +176,8 @@ class ArticlesManager {
           resolve(finalArr);
         }
       } catch (error) {
-        console.log(`Error Found : ${error}`);
-        reject(error);
+        const errResp = await errorObj.errorHander('', error);
+        reject(errResp);
       }
     });
   }
