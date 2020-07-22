@@ -31,10 +31,6 @@
 	},
 	"env": "local",
 	"database": {
-		"mongo": "mongodb://127.0.0.1/vumonic",
-		"redis": {
-			"host": "127.0.0.1",
-			"port": 6379
-		}
+		"mongo": "mongodb://127.0.0.1/vumonic"
 	}
 }
