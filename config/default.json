@@ -5,7 +5,7 @@
 		"appSecretKey": "Saurabh@1234",
 		"auth": {
 			"issuer": "localhost",
-			"expires": "100h"
+			"expires": "5m"
 		},
 		"modules": [
 			{
