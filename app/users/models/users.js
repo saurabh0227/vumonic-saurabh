@@ -36,8 +36,10 @@ class UsersManager {
     return new Promise(async (resolve, reject) => {
       try {
         const reqData = reqObj.body;
-        const userData = await userModel.findOne({ email: reqData.email }).orFail(new Error('User not found!'));
-        const passwordsMatch = await bcrypt.compareSync(reqData.password, userData.password);
+        const userData = await userModel.findOne({ email: reqData.email }, { password: 0 })
+          .orFail(new Error('User not found!'));
+        const password = (await userModel.findOne({ email: reqData.email }, { password: 1 })).password;
+        const passwordsMatch = await bcrypt.compareSync(reqData.password, password);
         if (passwordsMatch) {
           const token = await authManager.generateToken({ userId: userData._id, userRole: userData.role }, {});
           resolve({
