@@ -4,8 +4,6 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "gulp": "gulp",
-    "minify": "gulp minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Saurabh Kumar",
