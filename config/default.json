@@ -31,6 +31,6 @@
 	},
 	"env": "local",
 	"database": {
-		"mongo": "mongodb://127.0.0.1/vumonic"
+		"mongo": "mongodb://saurabh:a123456@ds147361.mlab.com:47361/vumonic-saurabh"
 	}
 }
