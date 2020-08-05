@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "./node_modules/.bin/netlify_lambda serve app",
-    "build": "./node_modules/.bin/netlify_lambda build app"
+    "build": "./node_modules/.bin/netlify_lambda build app",
+    "postinstall": "netlify-lambda install"
   },
   "author": "Saurabh Kumar",
   "license": "ISC",
