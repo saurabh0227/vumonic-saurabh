@@ -1,10 +1,10 @@
 {
 	"app": {
 		"secret": "Saurabh",
-		"issuer": "localhost",
+		"issuer": "vumonic-saurabh.herokuapp.com",
 		"appSecretKey": "Saurabh@1234",
 		"auth": {
-			"issuer": "localhost",
+			"issuer": "vumonic-saurabh.herokuapp.com",
 			"expires": "5m"
 		},
 		"modules": [
