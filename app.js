@@ -11,7 +11,6 @@ const app = express();
 const router = express.Router();
 const cors = require('cors');
 const config = require('config');
-const serverless = require('serverless-http');
 
 app.options("*", cors());
 app.use(cors({
@@ -23,8 +22,7 @@ for (let key of domain.domains) {
   app.use(vhost(key.domain_name, key.object));
 }
 
-app.use('/.netlify/functions', router);
-// app.use('/', router);
+app.use('/', router);
 
 app.use(function (req, res, next) {
   // Website you wish to allow to connect
@@ -53,4 +51,4 @@ const server = http.createServer(app);
 server.listen(config.server.port, () => {
   console.log(`Express server listening on port ${config.server.port} environment: ${config.env}`);
 });
-module.exports.handler = serverless(app);
+module.exports = app;

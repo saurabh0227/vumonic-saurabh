@@ -4,9 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "./node_modules/.bin/netlify_lambda serve app",
-    "build": "./node_modules/.bin/netlify_lambda build app",
-    "postinstall": "netlify-lambda install"
+    "start": "node app.js"
   },
   "author": "Saurabh Kumar",
   "license": "ISC",
@@ -28,14 +26,12 @@
     "mongoose": "^5.9.13",
     "mongoose-ttl": "0.0.3",
     "mongoose-unique-validator": "^2.0.1",
-    "netlify-lambda": "^2.0.1",
     "nodemon": "^1.19.4",
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
     "requestretry": "^4.1.0",
     "runscript": "^1.4.0",
     "server": "^1.0.27",
-    "serverless-http": "^2.5.0",
     "underscore": "^1.10.2",
     "vhost": "^3.0.2"
   },
