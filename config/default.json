@@ -29,7 +29,7 @@
 	"server": {
 		"port": 3000
 	},
-	"env": "local",
+	"env": "production",
 	"database": {
 		"mongo": "mongodb://saurabh:a123456@ds147361.mlab.com:47361/vumonic-saurabh"
 	}
