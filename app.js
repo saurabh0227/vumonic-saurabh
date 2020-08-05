@@ -48,7 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 mongooseObj = require(ROOT_DIR + 'config/connection').mongo_init();
 
 const server = http.createServer(app);
-server.listen(config.server.port, () => {
+server.listen(process.env.PORT || config.server.port, () => {
   console.log(`Express server listening on port ${config.server.port} environment: ${config.env}`);
 });
 module.exports = app;
