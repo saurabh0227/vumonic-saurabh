@@ -5,7 +5,7 @@
 		"appSecretKey": "Saurabh@1234",
 		"auth": {
 			"issuer": "vumonic-saurabh.herokuapp.com",
-			"expires": "5m"
+			"expires": "50m"
 		},
 		"modules": [
 			{
