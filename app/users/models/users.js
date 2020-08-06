@@ -20,7 +20,8 @@ class UsersManager {
         const password = await bcrypt.hashSync(reqData.password, 5);
         reqData.password = password;
         const userData = new userModel(reqData);
-        const user = await userData.save();
+        const insertedUser = await userData.save();
+        const user = await userModel.findOne({ _id: insertedUser._id }, { password: 0 })
         resolve({
           status: "success",
           userData: user
